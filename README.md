@@ -1,2 +1,2 @@
 # everything-converter
-An Application that converts everything 
+An application that converts everything.
