@@ -54,7 +54,16 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 20,
-  }
+  },
+  input: {
+    backgroundColor:'#FCDCDF',
+    padding: 20,
+    margin: 10,
+    borderRadius: 15,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 1,
+  },
 });
 
 export default styles;

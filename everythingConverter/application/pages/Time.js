@@ -8,7 +8,7 @@ import styles from '../styles.js';
 const Time = ({ navigation }) => {
   return (
     <>
-    <Text>Time</Text>
+      <Text>Time coming soon!</Text>
     </>
   );
 };
