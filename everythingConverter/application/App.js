@@ -8,15 +8,19 @@
 
 import React from 'react';
 import {
-  SafeAreaView, ScrollView, View,
-  Text, StatusBar, Button, Alert,
-  TouchableOpacity
+  SafeAreaView, ScrollView, View, Text, StatusBar, Button, Alert, TouchableOpacity
 } from 'react-native';
 
-import { LearnMoreLinks } from 'react-native/Libraries/NewAppScreen';
+import { LearnMoreLinks } from 'react-native/Libraries/NewAppScreen'; //just for reference
 
-// import styles from './styles.module.css';
+// import 'react-native-gesture-handler';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createStackNavigator } from '@react-navigation/stack';
+// const Stack = createStackNavigator();
+
 import styles from './styles.js';
+
+
 
 const redirect = (e) => {
   Alert.alert('redirect is not set up yet');
@@ -24,6 +28,9 @@ const redirect = (e) => {
 
 const App: () => React$Node = () => {
   return (
+    // <NavigationContainer>
+    //   {/* Rest of your app code */}
+    // </NavigationContainer>
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
@@ -38,6 +45,7 @@ const App: () => React$Node = () => {
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Everything Converter</Text>
+
               {/* TIME ZONE */}
               <TouchableOpacity style={styles.button} onPress={redirect}>
                 <Text style={styles.buttonText}>Time Zone</Text>
@@ -67,5 +75,6 @@ const App: () => React$Node = () => {
     </>
   );
 };
+
 
 export default App;
