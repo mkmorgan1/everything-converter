@@ -7,16 +7,22 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView, ScrollView, View, Text, StatusBar, Button, Alert, TouchableOpacity
-} from 'react-native';
+// import {
+//   SafeAreaView, ScrollView, View, Text, StatusBar, Button, Alert, TouchableOpacity
+// } from 'react-native';
+
+import Home from './pages/Home.js';
+import Time from './pages/Time.js';
+import Length from './pages/Length.js';
+import Weight from './pages/Weight.js';
+import Volume from './pages/Volume.js';
 
 import { LearnMoreLinks } from 'react-native/Libraries/NewAppScreen'; //just for reference
 
-// import 'react-native-gesture-handler';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
-// const Stack = createStackNavigator();
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+const Stack = createStackNavigator();
 
 import styles from './styles.js';
 
@@ -28,50 +34,25 @@ const redirect = (e) => {
 
 const App: () => React$Node = () => {
   return (
-    // <NavigationContainer>
-    //   {/* Rest of your app code */}
-    // </NavigationContainer>
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          {/* {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )} */}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Everything Converter</Text>
-
-              {/* TIME ZONE */}
-              <TouchableOpacity style={styles.button} onPress={redirect}>
-                <Text style={styles.buttonText}>Time Zone</Text>
-              </TouchableOpacity>
-
-              {/* LENGTH */}
-              <TouchableOpacity style={styles.button} onPress={redirect}>
-                <Text style={styles.buttonText}>Length</Text>
-              </TouchableOpacity>
-
-              {/* WEIGHT */}
-              <TouchableOpacity style={styles.button} onPress={redirect}>
-                <Text style={styles.buttonText}>Weight</Text>
-              </TouchableOpacity>
-
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Cmd + d = debug | Cmd + r = reload
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      {/* {global.HermesInternal == null ? null : (
+        <View style={styles.engine}>
+          <Text style={styles.footer}>Engine: Hermes</Text>
+        </View>
+      )} */}
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ title: 'Welcome' }}
+          />
+          <Stack.Screen name="Time" component={Time} />
+          <Stack.Screen name="Length" component={Length} />
+          <Stack.Screen name="Weight" component={Weight} />
+          <Stack.Screen name="Volume" component={Volume} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 };
