@@ -14,7 +14,7 @@ import React from 'react';
 import Home from './pages/Home.js';
 import Time from './pages/Time.js';
 import Length from './pages/Length.js';
-import Weight from './pages/Weight.js';
+import Mass from './pages/Mass.js';
 import Volume from './pages/Volume.js';
 
 import { LearnMoreLinks } from 'react-native/Libraries/NewAppScreen'; //just for reference
@@ -49,7 +49,7 @@ const App: () => React$Node = () => {
           />
           <Stack.Screen name="Time" component={Time} />
           <Stack.Screen name="Length" component={Length} />
-          <Stack.Screen name="Weight" component={Weight} />
+          <Stack.Screen name="Mass" component={Mass} />
           <Stack.Screen name="Volume" component={Volume} />
         </Stack.Navigator>
       </NavigationContainer>

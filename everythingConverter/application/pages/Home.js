@@ -24,7 +24,7 @@ const Home = ({ navigation }) => {
               <Text style={styles.sectionTitle}>Everything Converter</Text>
               <HomeButton navigation={navigation} title={'Time'}/>
               <HomeButton navigation={navigation} title={'Length'}/>
-              <HomeButton navigation={navigation} title={'Weight'}/>
+              <HomeButton navigation={navigation} title={'Mass'}/>
               <HomeButton navigation={navigation} title={'Volume'}/>
             </View>
             <View style={styles.sectionContainer}>
