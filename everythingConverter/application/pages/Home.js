@@ -11,14 +11,15 @@ const redirect = (e) => {
   Alert.alert('redirect is not set up yet');
 }
 
+// Cmd + d = debug | Cmd + r = reload
 const Home = ({ navigation }) => {
   return (
     <>
       {/* <StatusBar barStyle="dark-content" /> */}
-      <SafeAreaView>
+      {/* <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+          style={styles.scrollView}> */}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Everything Converter</Text>
@@ -27,16 +28,9 @@ const Home = ({ navigation }) => {
               <HomeButton navigation={navigation} title={'Mass'}/>
               <HomeButton navigation={navigation} title={'Volume'}/>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Cmd + d = debug | Cmd + r = reload
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
-        </ScrollView>
-      </SafeAreaView>
+        {/* </ScrollView>
+      </SafeAreaView> */}
     </>
   );
 };
